@@ -6,5 +6,5 @@ matching_branches=($(git ls-remote --heads | grep -E "/feature/.*" | awk -F'/' '
 for branch in "${matching_branches[@]}"
 do
   # Delete remotely
-  git push --delete origin "$branch"
+  git push --delete origin feature/"$branch"
 done
